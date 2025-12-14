@@ -1,0 +1,39 @@
+<mvc:View controllerName="org.index.it.employeedata.controller.Validation_Screenlayout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox id="_IDGenVBox" alignItems="Center" height="100%" justifyContent="SpaceAround">
+                <form:SimpleForm id="_IDGenSimpleForm" layout="ResponsiveGridLayout" width="500px" backgroundDesign="Solid" editable="true">
+                    <Label id="_idLabelCountry" text="{i18n>lblCountry}"/>
+                    <Input id="_idinputcountry"/>
+                    <Label id="_idLabelEmployeeId" text="{i18n>lblEmpId}"/>
+                    <Input id="_IDGenEmployeeId" />
+                    <Label id="_idLabelEmployeeRole" text="{i18n>lblEmpRole}"/>
+                    <Input id="_IDGenEmployeeRole" />
+                    <Label id="_idLabelEmployeeSalary" text="{i18n>lblEmpSalary}"/>
+                    <Input id="_IDGenEmployeeSalary" />
+                    <Label id="_idLabelEmployeeName" text="{i18n>lblEmpName}"/>
+                    <Input id="_IDGenEmployeeName" />
+                    <Label id="_idLabelstate" text="{i18n>lblState}" class="sapUiTinyMarginTop"/>
+                    <ComboBox id="_IDGenComboBoxState">
+                        <items>
+                            <core:Item id="_IDGenItemstate1" key="{i18n>keyAP}" text="{i18n>stateAndhraPradesh}"/>
+                            <core:Item id="_IDGenItemstate2" key="{i18n>keyTS}" text="{i18n>stateTelangana}"/>
+                        </items>
+                    </ComboBox>
+                    <Label id="_idLabelCity" text="{i18n>lblCity}"/>
+                    <ComboBox id="_IDGenComboBoxCity">
+                        <items>
+                            <core:Item id="_IDGenItem" key="{i18n>keyVSKP}" text="{i18n>cityVisakhapatnam}"/>
+                            <core:Item id="_IDGenItem1" key="{i18n>keyVJYW}" text="{i18n>cityVijayawada}"/>
+                        </items>
+                    </ComboBox>
+                    <Button id="_IDGenButtonSave" text="Save" press="onSave" type="Default"/>
+                </form:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

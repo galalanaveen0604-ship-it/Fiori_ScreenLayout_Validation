@@ -1,0 +1,98 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "org.index.it.employeedata",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.0",
+      "toolsId": "d07987a3-dbe2-4738-9017-ec3079f36307"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.143.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "org.index.it.employeedata.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "org.index.it.employeedata.view",
+        "async": true,
+        "viewPath": "org.index.it.employeedata.view"
+      },
+      "routes": [
+        {
+          "name": "RouteValidation_Screenlayout",
+          "pattern": ":?query:",
+          "target": [
+            "TargetValidation_Screenlayout"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetValidation_Screenlayout": {
+          "id": "Validation_Screenlayout",
+          "name": "Validation_Screenlayout"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "org.index.it.employeedata.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
