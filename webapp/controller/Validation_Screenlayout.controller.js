@@ -24,6 +24,8 @@ sap.ui.define([
                 empID.setValueState("None");
             }
 
+
+            
             if (!/^[A-Z ]+$/.test(name)) {
                 empName.setValueState("Error");
                 empName.setValueStateText("Name should be in capitals");
